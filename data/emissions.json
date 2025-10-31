@@ -1,0 +1,45 @@
+{
+  "emission_types": [
+    {
+      "emission_code": "CO2",
+      "description": "Carbon Dioxide"
+    },
+    {
+      "emission_code": "N2O",
+      "description": "Nitrous Oxide"
+    }
+  ],
+  "countries": [
+    {
+      "country_name": "Colombia",
+      "country_code": "COL"
+    },
+    {
+      "country_name": "United Kingdom",
+      "country_code": "GB"
+    }
+  ],
+  "emissions": [
+    {
+      "emissions": 8.1,
+      "emission_type": "CO2",
+      "country": "Colombia",
+      "activity": "Transportation",
+      "year": 2021
+    },
+    {
+      "emissions": 5.2,
+      "emission_type": "CO2",
+      "country": "United Kingdom",
+      "activity": "Air Travel",
+      "year": 2015
+    },
+    {
+      "emissions": 2.9,
+      "emission_type": "N2O",
+      "country": "United Kingdom",
+      "activity": "Waste",
+      "year": 2016
+    }
+  ]
+}

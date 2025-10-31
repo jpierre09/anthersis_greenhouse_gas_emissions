@@ -1,0 +1,30 @@
+
+services:
+  greenhouse_emissions_db:
+    image: postgres:15
+    container_name: greenhouse_emissions_db
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  greenhouse_emissions_backend:
+    build: .                                  
+    container_name: greenhouse_emissions_backend
+    command: ["/app/entrypoint.sh"]
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - greenhouse_emissions_db
+    env_file:
+      - .env
+    volumes:
+      - .:/app                                
+      - ./data:/app/data                      
+
+volumes:
+  postgres_data:
